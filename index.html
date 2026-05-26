@@ -25,7 +25,7 @@
 }
 
 html { scroll-behavior: smooth; }
-body { font-family: var(--ff-sans); background: var(--cream); color: var(--text-dark); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--ff-sans); background: var(--cream); color: var(--text-dark); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 
 /* ── NAV ── */
 nav {
@@ -274,7 +274,30 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
   .objekte-header { flex-direction: column; align-items: flex-start; }
   .ankauf-tabs { flex-wrap: wrap; }
   .ankauf-tab { flex: none; width: 50%; }
-  section { padding: 4rem 5vw; }
+  section { padding: 3rem 5vw; }
+  .numbers-strip { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .stats-bar { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .stat { border-right: none; border-bottom: 0.5px solid rgba(200,180,154,0.18); padding-bottom: 1rem; }
+  .panel-tags { flex-wrap: wrap; }
+  .panel-tag { font-size: 0.72rem; padding: 0.25rem 0.6rem; }
+  .hero-title { font-size: 2.2rem; }
+  .section-title { font-size: 1.6rem; }
+  .objekt-metrics { grid-template-columns: repeat(3, 1fr); }
+  .carousel-thumbs { grid-template-columns: repeat(4, 1fr) !important; }
+  .team-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+@media (max-width: 400px) {
+  .ankauf-tab { width: 100%; }
+  .numbers-strip { grid-template-columns: 1fr; }
+  .stats-bar { grid-template-columns: 1fr; }
+  .hero-title { font-size: 1.9rem; }
+}
+
+@media (max-width: 640px) {
+  .wie-wir-grid { grid-template-columns: 1fr !important; background: transparent !important; }
+  .wie-wir-grid > div { border-bottom: 0.5px solid var(--rule); }
+  .impressum-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
 }
 </style>
 </head>
@@ -704,7 +727,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
   <h2 class="section-title">Kein Volumen.<br><em>Volle Verantwortung.</em></h2>
   <p class="section-lead">Wir kaufen selektiv, entwickeln jeden Quadratmeter selbst und stehen mit unserem Namen dafür.</p>
 
-  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--rule); border:0.5px solid var(--rule); margin-top:3rem;">
+  <div class="wie-wir-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--rule); border:0.5px solid var(--rule); margin-top:3rem;">
     <div style="background:var(--white); padding:2rem 1.75rem;">
       <p style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:500; color:var(--brown); line-height:1; margin-bottom:0.5rem;">2</p>
       <p style="font-size:0.72rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--brown-light); margin-bottom:0.75rem;">Objekte entwickelt</p>
@@ -902,7 +925,7 @@ function showTab(id, btn) {
   <p class="section-eyebrow">Impressum</p>
   <h2 class="section-title" style="margin-bottom: 2rem;">Angaben gemäß<br><em>§ 5 TMG</em></h2>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; max-width: 900px;">
+  <div class="impressum-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; max-width: 900px;">
     <div>
       <p style="font-size:0.72rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--brown-light); margin-bottom:0.75rem;">Verantwortlich</p>
       <p style="font-size:0.95rem; color:var(--text-dark); font-weight:300; line-height:1.9;">
