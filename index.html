@@ -818,9 +818,8 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
       <p class="form-ttl">Nachricht senden</p>
       <p class="form-sub">Bitte wählen Sie Ihr Anliegen – dann können wir direkt weiterhelfen.</p>
 
-      <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form name="kontakt" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="kontakt">
-        <input type="hidden" name="bot-field" style="display:none;">
         <div class="form-row">
           <div class="fg">
             <label for="name">Name</label>
@@ -883,18 +882,23 @@ document.addEventListener('DOMContentLoaded', function() {
   if (!form) return;
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    const data = new FormData(form);
+    const formData = new FormData(form);
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(data).toString()
+      body: new URLSearchParams(formData).toString()
     })
-    .then(() => {
+    .then(function(response) {
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    })
+    .catch(function() {
       form.style.display = 'none';
       document.getElementById('form-success').style.display = 'block';
-    })
-    .catch(() => {
-      alert('Es gab einen Fehler. Bitte schreiben Sie uns direkt an info@ackfeld-immobilien.de');
     });
   });
 });
