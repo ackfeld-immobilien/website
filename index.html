@@ -210,7 +210,7 @@ hr.rule { border: none; border-top: 0.5px solid var(--rule); }
 .makler-text .section-lead { margin-bottom: 2rem; }
 .makler-perks { display: flex; flex-direction: column; gap: 0; }
 .perk { display: flex; gap: 1.25rem; padding: 1.25rem 0; border-bottom: 0.5px solid var(--rule); align-items: flex-start; }
-.perk:first-child { padding-top: 0; border-top: 0.5px solid var(--rule); }
+.perk:first-child { border-top: 0.5px solid var(--rule); }
 .perk-n { font-family: var(--ff-serif); font-size: 0.85rem; color: var(--sand); min-width: 1.5rem; padding-top: 0.05rem; }
 .perk-body { font-size: 0.9rem; color: var(--text-muted); font-weight: 300; line-height: 1.65; }
 .perk-body strong { font-weight: 500; color: var(--brown); }
@@ -364,11 +364,10 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
   <div class="hero-text">
     <p class="eyebrow">Wohnimmobilien · Nordrhein-Westfalen</p>
     <h1 class="hero-title">Direktankauf.<br>Schnelle <em>Entscheidung.</em><br>Klare Abwicklung.</h1>
-    <p class="hero-body">Wir kaufen leerstehende Einzelwohnungen in Nordrhein-Westfalen – direkt, ohne Maklerumwege, mit verbindlichem Angebot in wenigen Tagen.</p>
+    <p class="hero-body">Wir kaufen leerstehende Einzelwohnungen in Nordrhein-Westfalen. Direkt, ohne Maklerumwege, mit einem Angebot das wir halten.</p>
     <div class="hero-pills">
       <span class="pill">NRW ab 50.000 Einwohner</span>
       <span class="pill">Einzelwohnungen</span>
-      <span class="pill">Leerstehend</span>
       <span class="pill">Auch renovierungs- & sanierungsbedürftig</span>
     </div>
     <div class="hero-actions">
@@ -387,9 +386,9 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
   <div class="split-panel">
     <p class="split-tag">Für Eigentümer & Makler</p>
     <h2 class="split-title">Sie möchten <em>verkaufen?</em></h2>
-    <p class="split-body">Wir sind direkter Käufer – kein Fonds, kein Gremium, keine Finanzierungsvorbehalte. Sie erhalten ein konkretes Angebot, das wir halten.</p>
+    <p class="split-body">Wir sind direkter Käufer. Kein Fonds, kein Gremium, keine Finanzierungsvorbehalte. Sie erhalten ein konkretes Angebot, das wir halten.</p>
     <ul class="split-list">
-      <li>Verbindliches Angebot innerhalb von 5 Werktagen</li>
+      <li>Konkretes Angebot, schriftlich und verbindlich</li>
       <li>Notarbeauftragung innerhalb einer Woche nach Einigung</li>
       <li>Keine Maklergebühren für Sie als Privatverkäufer</li>
       <li>Wir übernehmen auch Entrümpelung & Räumung</li>
@@ -399,12 +398,12 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
   <div class="split-panel">
     <p class="split-tag">Für Kapitalanleger</p>
     <h2 class="split-title">Fertige Objekte mit <em>Rendite.</em></h2>
-    <p class="split-body">Wir entwickeln Objekte und verkaufen sie selektiv an Kapitalanleger – vollständig aufbereitet, mit belastbaren Zahlen.</p>
+    <p class="split-body">Wir entwickeln Objekte und verkaufen sie selektiv an Kapitalanleger. Vollständig aufbereitet, mit belastbaren Zahlen.</p>
     <ul class="split-list">
-      <li>Sofort vermietbar, geringes Leerstandsrisiko</li>
       <li>5,6 % Bruttorendite (aktuelle Objekte Münster)</li>
       <li>AfA-Optimierung durch Restnutzungsdauergutachten möglich</li>
       <li>Positiver Cashflow ab Monat 1</li>
+      <li>Vollständiges Komplettpaket, kein Aufwand für Sie</li>
     </ul>
     <a href="#objekte" class="btn-ghost">Aktuelle Objekte ansehen</a>
   </div>
@@ -455,7 +454,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
       <div class="ankauf-tab-panels">
         <div class="ankauf-panel active" id="t1">
           <p class="panel-title">Leerstehende Einzelwohnungen</p>
-          <p class="panel-lead">Das ist unser Kerngeschäft. Wir kaufen leerstehende Eigentumswohnungen in NRW – unabhängig davon, wie lange die Wohnung bereits leer steht oder warum. Keine langen Erklärungen nötig.</p>
+          <p class="panel-lead">Das ist unser Kerngeschäft. Wir kaufen leerstehende Eigentumswohnungen in NRW, unabhängig davon, wie lange die Wohnung bereits leer steht oder warum. Keine langen Erklärungen nötig.</p>
           <div class="panel-tags">
             <span class="panel-tag">Alle Baujahre</span>
             <span class="panel-tag">Alle Größen</span>
@@ -467,7 +466,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
         </div>
         <div class="ankauf-panel" id="t2">
           <p class="panel-title">Renovierungs- & Sanierungsbedürftige Wohnungen</p>
-          <p class="panel-lead">Schimmel, veraltete Elektrik, abgewohnte Böden, Kernsanierung – kein Problem. Wir bewerten den Sanierungs- und Renovierungsbedarf selbst und machen ein Angebot, das den Zustand fair einpreist. Kein Abzug im Nachhinein.</p>
+          <p class="panel-lead">Schimmel, veraltete Elektrik, abgewohnte Böden, Kernsanierung: kein Problem. Wir bewerten den Sanierungs- und Renovierungsbedarf selbst und machen ein Angebot, das den Zustand fair einpreist. Kein Abzug im Nachhinein.</p>
           <div class="panel-tags">
             <span class="panel-tag">Feuchtigkeit & Schimmel</span>
             <span class="panel-tag">Elektrik & Heizung</span>
@@ -479,7 +478,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
         </div>
         <div class="ankauf-panel" id="t3">
           <p class="panel-title">Wohnungen mit Entrümpelung</p>
-          <p class="panel-lead">Sie möchten nichts mitnehmen oder haben keine Zeit, die Wohnung zu räumen? Wir übernehmen die Entrümpelung und Räumung – vollständig, koordiniert, ohne zusätzlichen Aufwand für Sie.</p>
+          <p class="panel-lead">Sie möchten nichts mitnehmen oder haben keine Zeit, die Wohnung zu räumen? Wir übernehmen die Entrümpelung und Räumung, vollständig und koordiniert, ohne zusätzlichen Aufwand für Sie.</p>
           <div class="panel-tags">
             <span class="panel-tag">Vollständige Räumung</span>
             <span class="panel-tag">Nachlasswohnungen</span>
@@ -507,11 +506,11 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
       </div>
 
       <div class="info-box">
-        <p class="info-box-title">Ablauf – so funktioniert es</p>
+        <p class="info-box-title">Ablauf: so funktioniert es</p>
         <div class="info-process">
           <div class="proc-step">
             <span class="proc-n">1</span>
-            <span class="proc-text"><strong>Erstkontakt:</strong> Sie schicken uns Objektart, Baujahr, Energieeffizienzklasse, Adresse und Größe – das reicht für eine Ersteinschätzung.</span>
+            <span class="proc-text"><strong>Erstkontakt:</strong> Sie schicken uns Objektart, Baujahr, Energieeffizienzklasse, Adresse und Größe. Das reicht für eine Ersteinschätzung.</span>
           </div>
           <div class="proc-step">
             <span class="proc-n">2</span>
@@ -542,7 +541,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
       <p class="section-eyebrow">Für Kapitalanleger</p>
       <h2 class="section-title" style="margin-bottom: 0;">Aktuelle <em>Objekte.</em></h2>
     </div>
-    <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 300; max-width: 340px; line-height: 1.65;">Objekte, die wir selbst entwickelt und aufbereitet haben – mit vollständiger Dokumentation für Investoren im Spitzensteuersatz.</p>
+    <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 300; max-width: 340px; line-height: 1.65;">Objekte, die wir selbst entwickelt und aufbereitet haben, mit vollständiger Dokumentation für Investoren im Spitzensteuersatz.</p>
   </div>
 
   <div class="objekt-feature">
@@ -595,7 +594,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
     <div class="objekt-detail">
       <span class="objekt-badge">Verfügbar · Sofort investierbar</span>
       <h3 class="objekt-detail-name">4-Zimmer WG, vollmöbliert<br>Münster · Westfalen</h3>
-      <p class="objekt-detail-desc">Vollständig möblierte 4-Zimmer-WG in einer der gefragtesten Lagen Münsters – ÖPNV und Einkauf direkt vor der Tür. Sie kaufen, wir kümmern uns um den Rest: Erstvermietung, laufende Verwaltung auf Wunsch, und ein Objekt das vom ersten Tag an Ertrag bringt. Cashflow positiv nach Rücklagenbildung und nicht umlegbaren Kosten. Kein Aufwand, geringes Leerstandsrisiko.</p>
+      <p class="objekt-detail-desc">Vollständig möblierte 4-Zimmer-WG in einer der gefragtesten Lagen Münsters. ÖPNV und Einkauf direkt vor der Tür. Sie kaufen, wir kümmern uns um den Rest: Erstvermietung, laufende Verwaltung auf Wunsch, ein Objekt das vom ersten Tag an Ertrag bringt. Cashflow positiv nach Rücklagenbildung und nicht umlegbaren Kosten.</p>
       <div class="objekt-metrics">
         <div class="om">
           <span class="om-val">5,6 %</span>
@@ -613,10 +612,6 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
       <div style="margin-bottom:1.5rem; padding:1.25rem 1.5rem; background:var(--sand-pale); border-left:3px solid var(--brown);">
         <p style="font-size:0.7rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--brown-light); margin-bottom:0.4rem;">Kaufpreis</p>
         <p style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:400; color:var(--brown); line-height:1;">540.000 €</p>
-      </div>
-      <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.25rem;">
-        <span style="font-size:0.72rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--brown-light); border:0.5px solid var(--sand); padding:0.3rem 0.75rem; background:var(--sand-pale);">Erstvermietung inklusive</span>
-        <span style="font-size:0.72rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--brown-light); border:0.5px solid var(--sand); padding:0.3rem 0.75rem; background:var(--sand-pale);">Verwaltung auf Anfrage</span>
       </div>
       <a href="https://www.anfrage-termin.de/ackfeld-immobilien-wg-munster/page_ywffpl/" target="_blank" rel="noopener" class="btn-primary">Exposé anfordern</a>
       <p class="objekt-footnote">AfA-Optimierung (3,5–4 %) setzt ein Restnutzungsdauergutachten voraus, das nach Erwerb beauftragt wird. Alle Angaben dienen der Erstorientierung; maßgeblich sind die Unterlagen im Exposé.</p>
@@ -659,7 +654,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
       <div class="objekt-detail">
         <span class="objekt-badge">Verfügbar · Sofort investierbar</span>
         <h3 class="objekt-detail-name">4-Zimmer WG, vollmöbliert<br>Münster · Westfalen</h3>
-        <p class="objekt-detail-desc">Vollständig sanierte und möblierte 4-Zimmer-WG in zentraler Lage – Bäcker, Supermarkt, ÖPNV und Gastronomie fußläufig. Sie unterschreiben beim Notar – wir übernehmen alles andere: Erstvermietung, Übergabe, Verwaltung auf Wunsch. Cashflow positiv nach Rücklagenbildung und nicht umlegbaren Kosten. Ein Komplettpaket ohne Aufwand für Sie.</p>
+        <p class="objekt-detail-desc">Vollständig sanierte und möblierte 4-Zimmer-WG in zentraler Lage. Bäcker, Supermarkt, ÖPNV und Gastronomie fußläufig. Sie unterschreiben beim Notar, wir übernehmen alles andere: Erstvermietung, Übergabe, Verwaltung auf Wunsch. Cashflow positiv nach Rücklagenbildung und nicht umlegbaren Kosten. Ein Komplettpaket ohne Aufwand für Sie.</p>
         <div class="objekt-metrics">
           <div class="om">
             <span class="om-val">5,6 %</span>
@@ -678,11 +673,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
         <p style="font-size:0.7rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--brown-light); margin-bottom:0.4rem;">Kaufpreis</p>
         <p style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:400; color:var(--brown); line-height:1;">530.000 €</p>
       </div>
-        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.25rem;">
-        <span style="font-size:0.72rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--brown-light); border:0.5px solid var(--sand); padding:0.3rem 0.75rem; background:var(--sand-pale);">Erstvermietung inklusive</span>
-        <span style="font-size:0.72rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--brown-light); border:0.5px solid var(--sand); padding:0.3rem 0.75rem; background:var(--sand-pale);">Verwaltung auf Anfrage</span>
-      </div>
-      <a href="https://www.anfrage-termin.de/ackfeld-immobilien-wg-munster/page_ywffpl/" target="_blank" rel="noopener" class="btn-primary">Exposé anfordern</a>
+        <a href="https://www.anfrage-termin.de/ackfeld-immobilien-wg-munster/page_ywffpl/" target="_blank" rel="noopener" class="btn-primary">Exposé anfordern</a>
       <p class="objekt-footnote">AfA-Optimierung (bis 3,5 %) setzt ein Restnutzungsdauergutachten voraus, das nach Erwerb beauftragt wird. Alle Angaben dienen der Erstorientierung; maßgeblich sind die Unterlagen im Exposé.</p>
       </div>
     </div>
@@ -696,7 +687,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
 <section class="team" id="team">
   <p class="section-eyebrow">Das Team</p>
   <h2 class="section-title">Katharina & Felix <em>Ackfeld.</em></h2>
-  <p class="section-lead">Geschwister. Kein Fonds, keine Agentur – wir arbeiten mit eigenem Kapital, unter eigenem Namen und auf eigene Rechnung.</p>
+  <p class="section-lead">Geschwister. Kein Fonds, keine Agentur. Wir arbeiten mit eigenem Kapital, unter eigenem Namen und auf eigene Rechnung.</p>
 
   <div class="team-grid">
     <div>
@@ -705,7 +696,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
       </div>
       <p class="member-name">Katharina Ackfeld</p>
       <p class="member-role">Ex-McKinsey · Strategie · Investoren</p>
-      <p class="member-bio">Ich analysiere Objekte so, wie ich früher Unternehmen analysiert habe: strukturiert, ohne Schönfärberei, mit Blick auf das, was wirklich zählt. Kapitalanleger, die in Immobilien investieren, wollen keine Hochglanzpräsentation – sie wollen belastbare Zahlen, klare Antworten und einen Ansprechpartner, der mitdenkt. Genau das bringe ich ein.</p>
+      <p class="member-bio">Ich analysiere Objekte so, wie ich früher Unternehmen analysiert habe: strukturiert, ohne Schönfärberei, mit Blick auf das, was wirklich zählt. Kapitalanleger wollen keine Hochglanzpräsentation. Sie wollen belastbare Zahlen, klare Antworten und einen Ansprechpartner, der mitdenkt. Genau das bringe ich ein.</p>
     </div>
     <div>
       <div class="member-img">
@@ -713,7 +704,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
       </div>
       <p class="member-name">Felix Ackfeld</p>
       <p class="member-role">Entwicklung · Technik · Ankauf</p>
-      <p class="member-bio">Ich bin Ingenieur – und ich arbeite wie einer. Jedes Objekt bewerte ich baulich selbst, jede Entwicklung steuere ich direkt. Qualität und Zeitplan sind meine persönliche Verantwortung. Das bedeutet: keine Überraschungen nach dem Kauf. Was ich zusage, halte ich – das ist kein Versprechen, das ist mein Arbeitsstil.</p>
+      <p class="member-bio">Ich bin Ingenieur, und ich arbeite wie einer. Jedes Objekt prüfe ich persönlich, jede Entwicklung steuere ich direkt. Qualität und Zeitplan sind meine persönliche Verantwortung. Das bedeutet: keine Überraschungen nach dem Kauf. Was ich zusage, halte ich. Das ist kein Versprechen, das ist mein Arbeitsstil.</p>
     </div>
   </div>
 </section>
@@ -724,23 +715,23 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
 <section class="verkauf" id="verkauf">
   <p class="section-eyebrow">Für Eigentümer</p>
   <h2 class="section-title">Einfach. Diskret. <em>Verlässlich.</em></h2>
-  <p class="section-lead">Kein Bieterverfahren, keine Maklerkonkurrenz, kein monatelanger Prozess. Wir kaufen direkt und stehen dazu.</p>
+  <p class="section-lead">Kein Bieterverfahren, keine Maklerkonkurrenz, kein monatelanger Prozess. Wir kaufen direkt.</p>
 
   <div class="process-steps">
     <div class="ps">
       <p class="ps-num">01</p>
       <p class="ps-title">Kontakt aufnehmen</p>
-      <p class="ps-body">Schicken Sie uns die Eckdaten Ihres Objekts – formlos, per E-Mail oder Telefon. Keine langen Formulare.</p>
+      <p class="ps-body">Schicken Sie uns die Eckdaten Ihres Objekts, formlos per E-Mail oder Telefon. Keine langen Formulare.</p>
     </div>
     <div class="ps">
       <p class="ps-num">02</p>
       <p class="ps-title">Ersteinschätzung</p>
-      <p class="ps-body">Wir prüfen und melden uns innerhalb von 3–5 Werktagen mit einer ehrlichen Rückmeldung – auch wenn wir nicht kaufen.</p>
+      <p class="ps-body">Wir prüfen und melden uns innerhalb von 3–5 Werktagen mit einer ehrlichen Rückmeldung, auch wenn wir nicht kaufen.</p>
     </div>
     <div class="ps">
       <p class="ps-num">03</p>
       <p class="ps-title">Besichtigung & Angebot</p>
-      <p class="ps-body">Wenn es passt, besichtigen wir zeitnah. Das Kaufangebot kommt schriftlich, begründet und verbindlich.</p>
+      <p class="ps-body">Wenn es passt, besichtigen wir zeitnah. Das Kaufangebot kommt schriftlich und begründet.</p>
     </div>
     <div class="ps">
       <p class="ps-num">04</p>
@@ -752,27 +743,27 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
   <div class="vorteile-grid">
     <div class="vorteil">
       <span class="v-dash">–</span>
-      <p class="v-text"><strong>Direktkauf ohne Maklerprovision</strong> für private Verkäufer. Keine versteckten Kosten.</p>
+      <p class="v-text"><strong>Direktkauf ohne Maklerprovision</strong> für private Verkäufer, ohne versteckte Kosten.</p>
     </div>
     <div class="vorteil">
       <span class="v-dash">–</span>
-      <p class="v-text"><strong>Eigenkapitalnachweis</strong> auf Anfrage. Kein Finanzierungsvorbehalt, keine unsicheren Zusagen.</p>
+      <p class="v-text"><strong>Eigenkapitalnachweis</strong> auf Anfrage. Kein Finanzierungsvorbehalt, keine offenen Fragen.</p>
     </div>
     <div class="vorteil">
       <span class="v-dash">–</span>
-      <p class="v-text"><strong>Diskrete Abwicklung.</strong> Kein öffentliches Listing, keine Besichtigungstourismus.</p>
+      <p class="v-text"><strong>Diskrete Abwicklung.</strong> Kein öffentliches Listing, kein Besichtigungstourismus.</p>
     </div>
     <div class="vorteil">
       <span class="v-dash">–</span>
-      <p class="v-text"><strong>Auch Sanierungsobjekte.</strong> Wir bewerten baulich selbst – das gibt uns Spielraum, den andere nicht haben.</p>
+      <p class="v-text"><strong>Auch Sanierungsobjekte.</strong> Wir bewerten baulich selbst, was uns Spielraum gibt, den andere nicht haben.</p>
     </div>
     <div class="vorteil">
       <span class="v-dash">–</span>
-      <p class="v-text"><strong>Faire Bewertung.</strong> Nachvollziehbar begründet, marktgerecht – kein Unterbieten nach Unterschrift.</p>
+      <p class="v-text"><strong>Faire Bewertung.</strong> Nachvollziehbar begründet, marktgerecht. Kein Unterbieten nach Unterschrift.</p>
     </div>
     <div class="vorteil">
       <span class="v-dash">–</span>
-      <p class="v-text"><strong>Fester Ansprechpartner.</strong> Kurze Wege, klare Zuständigkeiten – Sie werden nicht weitergereicht.</p>
+      <p class="v-text"><strong>Fester Ansprechpartner.</strong> Kurze Wege, klare Zuständigkeiten. Sie werden nicht weitergereicht.</p>
     </div>
   </div>
 
@@ -800,12 +791,12 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
     <div style="background:var(--white); padding:2rem 1.75rem;">
       <p style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:500; color:var(--brown); line-height:1.1; margin-bottom:0.4rem; padding-top:0.85rem;">Schnelle</p>
       <p style="font-size:0.72rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--brown-light); margin-bottom:0.75rem;">Entscheidung</p>
-      <p style="font-size:0.88rem; color:var(--text-muted); font-weight:300; line-height:1.65;">Strukturierte Finanzierung, klare Zuständigkeiten – kein Finanzierungsvorbehalt, kein wochenlanges Warten.</p>
+      <p style="font-size:0.88rem; color:var(--text-muted); font-weight:300; line-height:1.65;">Klare Zuständigkeiten, kurze Entscheidungswege. Vom ersten Gespräch bis zum Notartermin.</p>
     </div>
     <div style="background:var(--white); padding:2rem 1.75rem;">
       <p style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:500; color:var(--brown); line-height:1.1; margin-bottom:0.4rem; padding-top:0.85rem;">Persönlich</p>
       <p style="font-size:0.72rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--brown-light); margin-bottom:0.75rem;">Erreichbar</p>
-      <p style="font-size:0.88rem; color:var(--text-muted); font-weight:300; line-height:1.65;">Kurze Wege, feste Ansprechpartner – ob Erstgespräch oder laufende Betreuung, Sie werden nicht weitergereicht.</p>
+      <p style="font-size:0.88rem; color:var(--text-muted); font-weight:300; line-height:1.65;">Kurze Wege, feste Ansprechpartner. Ob Erstgespräch oder laufende Betreuung, Sie werden nicht weitergereicht.</p>
     </div>
   </div>
 </section>
@@ -819,26 +810,26 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
 
   <div class="makler-inner">
     <div class="makler-text">
-      <p class="section-lead">Wir arbeiten mit Maklern oder Privatpersonen zusammen, die leerstehende Wohnungen in unserem Ankaufsgebiet vermarkten oder vermitteln. Was wir zusagen, halten wir. Schnelle Entscheidungen und reibungslose Abwicklung sind für uns kein Versprechen, sondern Standard.</p>
+      <p class="section-lead">Wir arbeiten mit Maklern und Privatpersonen zusammen, die leerstehende Wohnungen in unserem Ankaufsgebiet vermarkten oder vermitteln. Was wir zusagen, halten wir. Kurze Entscheidungswege und reibungslose Abwicklung sind für uns selbstverständlich.</p>
       <div class="makler-perks">
         <div class="perk">
           <span class="perk-n">1</span>
-          <p class="perk-body"><strong>Schnelle Prüfung</strong> – innerhalb von 5 Werktagen gibt es eine klare Rückmeldung. Keine wochenlangen Schleifen, keine unverbindlichen Vorgespräche.</p>
+          <p class="perk-body"><strong>Schnelle Prüfung</strong>: innerhalb von 5 Werktagen gibt es eine klare Rückmeldung. Keine wochenlangen Schleifen, keine unverbindlichen Vorgespräche.</p>
         </div>
         <div class="perk">
           <span class="perk-n">2</span>
-          <p class="perk-body"><strong>Verbindliche Abwicklung</strong> – nach Einigung beauftragen wir den Notar innerhalb einer Woche. Kein Nachverhandeln, kein Platzen kurz vor Termin.</p>
+          <p class="perk-body"><strong>Zuverlässige Abwicklung</strong>: nach Einigung beauftragen wir den Notar innerhalb einer Woche. Kein Nachverhandeln, kein Platzen kurz vor Termin.</p>
         </div>
         <div class="perk">
           <span class="perk-n">3</span>
-          <p class="perk-body"><strong>Langfristige Zusammenarbeit</strong> – wir kaufen regelmäßig. Wer zuverlässig vermittelt, wird bevorzugt kontaktiert.</p>
+          <p class="perk-body"><strong>Langfristige Zusammenarbeit</strong>: wir kaufen regelmäßig. Wer zuverlässig vermittelt, wird bevorzugt kontaktiert.</p>
         </div>
       </div>
     </div>
 
     <div class="makler-aside">
-      <p class="aside-title">„Ein Angebot von uns ist verbindlich. Wer einmal mit uns abgewickelt hat, weiß das."</p>
-      <p class="aside-body">Wenn Sie ein Objekt in NRW haben, das zu unserem Profil passt, nehmen Sie direkt Kontakt auf. Kein Formular, kein langer Prozess – ein Anruf oder eine E-Mail reicht für den Anfang.</p>
+      <p class="aside-title">„Ein Angebot von uns steht. Wer einmal mit uns abgewickelt hat, weiß das."</p>
+      <p class="aside-body">Wenn Sie ein Objekt in NRW haben, das zu unserem Profil passt, nehmen Sie direkt Kontakt auf. Kein Formular, kein langer Prozess. Ein Anruf oder eine E-Mail reicht für den Anfang.</p>
       <a href="#kontakt" class="aside-cta">Jetzt Kontakt aufnehmen</a>
     </div>
   </div>
@@ -853,7 +844,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
 
   <div class="contact-inner">
     <div>
-      <p class="section-lead">Ob Sie verkaufen, investieren oder als Makler zusammenarbeiten möchten – wir antworten persönlich. In der Regel innerhalb von 24 Stunden.</p>
+      <p class="section-lead">Ob Sie verkaufen, investieren oder als Makler zusammenarbeiten möchten: wir antworten persönlich, in der Regel innerhalb von 24 Stunden.</p>
       <div class="contact-channels">
         <div class="channel">
           <span class="ch-lbl">E-Mail</span>
@@ -880,7 +871,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
 
     <div class="contact-form">
       <p class="form-ttl">Nachricht senden</p>
-      <p class="form-sub">Bitte wählen Sie Ihr Anliegen – dann können wir direkt weiterhelfen.</p>
+      <p class="form-sub">Bitte wählen Sie Ihr Anliegen, dann können wir direkt weiterhelfen.</p>
 
       <form name="kontakt" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="kontakt">
