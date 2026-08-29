@@ -167,7 +167,7 @@ hr.rule { border: none; border-top: 0.5px solid var(--rule); }
 .ankauf-tab:hover:not(.active) { background: var(--sand-light); color: var(--brown); }
 .ankauf-tab-panels { border: 0.5px solid var(--rule); border-top: none; }
 .ankauf-panel { display: none; padding: 2rem; background: var(--white); }
-.ankauf-panel.active { display: block; }
+.ankauf-panel.active { display: block !important; }
 .panel-title { font-family: var(--ff-serif); font-size: 1.1rem; font-weight: 500; color: var(--brown); margin-bottom: 0.5rem; }
 .panel-lead { font-size: 0.9rem; color: var(--text-muted); font-weight: 300; line-height: 1.7; margin-bottom: 1.25rem; }
 .panel-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
@@ -273,7 +273,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .objekte-header { flex-direction: column; align-items: flex-start; }
   .ankauf-tabs { flex-wrap: wrap; border: 0.5px solid var(--rule); }
-  .ankauf-tab { flex: none; width: 100%; border-bottom: 0.5px solid var(--rule); text-align: left; padding: 0.85rem 1rem; }
+  .ankauf-tab { flex: none; width: 100%; border-bottom: 0.5px solid var(--rule); text-align: left; padding: 0.75rem 1rem; font-size: 0.82rem; }
   .ankauf-tab:last-child { border-bottom: none; }
   .ankauf-tab-panels { border: 0.5px solid var(--rule); border-top: none; }
   section { padding: 3rem 5vw; }
@@ -321,7 +321,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
   .ankauf-tab { font-size: 0.78rem; padding: 0.75rem 0.5rem; }
   
   /* Fix tab content padding */
-  .ankauf-panel { padding: 1.5rem 1rem; }
+  
   
   /* Fix hero caption on mobile */
   .hero-image-caption, .hero-caption { 
@@ -343,6 +343,141 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
 @media (max-width: 1000px) {
   .hero-img-main { object-position: center 65% !important; }
 }
+
+@media (max-width: 768px) {
+  .ankauf-tabs { flex-direction: column; }
+  .ankauf-tab { width: 100% !important; border-right: none; border-bottom: 0.5px solid var(--rule); }
+  .ankauf-tab.active { border-bottom: 0.5px solid var(--brown); }
+}
+
+@media (max-width: 768px) {
+  .mfh-strip-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+}
+
+/* ═══════════════════════════════
+   MOBILE RESPONSIVE - COMPLETE
+═══════════════════════════════ */
+
+/* Prevent horizontal scroll */
+html, body { overflow-x: hidden; max-width: 100%; }
+
+@media (max-width: 1000px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-text { min-height: auto; padding: 3rem 5vw 2.5rem; }
+  .hero-right { height: 85vw; position: relative; }
+  .hero-img-main { object-position: center 65% !important; }
+  .split { grid-template-columns: 1fr; }
+  .split-panel:first-child { border-right: none; border-bottom: 0.5px solid var(--rule); }
+  .ankauf-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .ankauf-aside { position: static; }
+  .team-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .makler-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .objekt-feature { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr 1fr; }
+  .vorteile-grid { grid-template-columns: 1fr 1fr; }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .stat:nth-child(2) { border-right: none; }
+  .mfh-strip-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+}
+
+@media (max-width: 768px) {
+  /* Ankauf tabs: stack vertically */
+  .ankauf-tabs { flex-direction: column; border: 0.5px solid var(--rule); }
+  .ankauf-tab { width: 100% !important; border-right: none !important; border-bottom: 0.5px solid var(--rule); text-align: left; padding: 0.85rem 1rem; font-size: 0.82rem; }
+  .ankauf-tab:last-child { border-bottom: none; }
+  .ankauf-tab-panels { border-top: none; }
+  
+
+  /* Panel tags wrap */
+  .panel-tags { flex-wrap: wrap; gap: 0.4rem; }
+  .panel-tag { font-size: 0.72rem; padding: 0.25rem 0.6rem; }
+
+  /* Metrics boxes */
+  .om-val { font-size: 1.1rem !important; white-space: nowrap; }
+  .om-key { font-size: 0.62rem; white-space: nowrap; }
+
+  /* Wie wir arbeiten */
+  .wie-wir-grid { grid-template-columns: 1fr !important; background: transparent !important; }
+  .wie-wir-grid > div { border-bottom: 0.5px solid var(--rule); }
+  .wie-wir-grid > div p:first-child { padding-top: 0 !important; }
+
+  /* Process steps */
+  .process-steps { grid-template-columns: 1fr; }
+  .vorteile-grid { grid-template-columns: 1fr; }
+  .vorteil:nth-child(4), .vorteil:nth-child(5), .vorteil:nth-child(6) { border-bottom: none; }
+
+  /* Numbers */
+  .numbers-strip { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .stats-bar { grid-template-columns: 1fr 1fr; }
+  .stat { border-right: none !important; border-bottom: 0.5px solid rgba(200,180,154,0.18); padding-bottom: 1rem; }
+
+  /* Typography */
+  .hero-title { font-size: 2.2rem; }
+  .section-title { font-size: 1.6rem; }
+
+  /* Form */
+  .form-row { grid-template-columns: 1fr; }
+
+  /* Impressum */
+  .impressum-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+
+  /* MFH strip */
+  .mfh-strip-grid > div:last-child { grid-template-columns: 1fr 1fr !important; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 1.9rem; }
+  .numbers-strip { grid-template-columns: 1fr; }
+  .stats-bar { grid-template-columns: 1fr; }
+  .hero-pills { flex-wrap: wrap; gap: 0.5rem; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .carousel-thumbs { grid-template-columns: repeat(4, 1fr) !important; }
+  section { padding: 3rem 4vw; }
+  .nav-links { display: none; }
+}
+@media (max-width: 768px) {
+  .zwei-spalten-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+}
+
+@media (max-width: 768px) {
+  /* MFH dark strip */
+  .mfh-strip-grid { grid-template-columns: 1fr !important; }
+  .mfh-strip-grid > div:last-child { grid-template-columns: 1fr 1fr !important; }
+  /* Two column section */
+  .zwei-spalten-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+  /* Stats bar */
+  .stats-bar { grid-template-columns: 1fr 1fr !important; }
+  .stat { border-right: none !important; border-bottom: 0.5px solid rgba(200,180,154,0.18); padding-bottom: 1rem; }
+  /* Ankauf tabs on mobile */  
+  .ankauf-tabs { flex-direction: column !important; }
+  .ankauf-tab { width: 100% !important; border-bottom: 0.5px solid var(--rule) !important; text-align: left !important; }
+  /* Panel tags */
+  .panel-tags { flex-wrap: wrap; }
+  .panel-tag { font-size: 0.72rem; }
+  /* Objekt metrics */
+  .om-val { font-size: 1rem !important; white-space: nowrap; }
+  .om-key { font-size: 0.6rem; }
+  /* Process steps and vorteile */
+  .process-steps { grid-template-columns: 1fr !important; }
+  .vorteile-grid { grid-template-columns: 1fr !important; }
+  /* Contact form */
+  .form-row { grid-template-columns: 1fr !important; }
+  /* Carousel thumbs */
+  .carousel-thumbs { grid-template-columns: repeat(4, 1fr) !important; }
+  /* Wie wir grid */
+  .wie-wir-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 480px) {
+  section { padding: 3rem 4vw !important; }
+  .hero-title { font-size: 1.9rem !important; }
+  .section-title { font-size: 1.5rem !important; }
+  .stats-bar { grid-template-columns: 1fr !important; }
+  .numbers-strip { grid-template-columns: 1fr 1fr !important; }
+  .hero-pills { flex-wrap: wrap; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+}
 </style>
 </head>
 <body>
@@ -362,12 +497,13 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
 <!-- HERO -->
 <div class="hero">
   <div class="hero-text">
-    <p class="eyebrow">Wohnimmobilien · Nordrhein-Westfalen</p>
+    <p class="eyebrow">Wohnimmobilien · Nordrhein-Westfalen · Familienunternehmen</p>
     <h1 class="hero-title">Direktankauf.<br>Schnelle <em>Entscheidung.</em><br>Klare Abwicklung.</h1>
-    <p class="hero-body">Wir kaufen leerstehende Einzelwohnungen in Nordrhein-Westfalen. Direkt, ohne Maklerumwege, mit einem Angebot das wir halten.</p>
+    <p class="hero-body">Wir kaufen Eigentumswohnungen und Mehrfamilienhäuser in NRW. Kein Fonds, keine Agentur. Ein Familienunternehmen, das direkt kauft, schnell entscheidet und jeden Abschluss persönlich begleitet.</p>
     <div class="hero-pills">
-      <span class="pill">NRW ab 50.000 Einwohner</span>
-      <span class="pill">Einzelwohnungen</span>
+      <span class="pill">MFH 4–10 Einheiten</span>
+      <span class="pill">Eigentumswohnungen</span>
+      <span class="pill">NRW ab 30.000 EW</span>
       <span class="pill">Auch renovierungs- & sanierungsbedürftig</span>
     </div>
     <div class="hero-actions">
@@ -386,7 +522,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
   <div class="split-panel">
     <p class="split-tag">Für Eigentümer & Makler</p>
     <h2 class="split-title">Sie möchten <em>verkaufen?</em></h2>
-    <p class="split-body">Wir sind direkter Käufer. Kein Fonds, kein Gremium, keine Finanzierungsvorbehalte. Sie erhalten ein konkretes Angebot, das wir halten.</p>
+    <p class="split-body">Wir sind direkter Käufer für Eigentumswohnungen und Mehrfamilienhäuser mit 4 bis 10 Einheiten in NRW. Kein Fonds, kein Gremium, keine Finanzierungsvorbehalte. Sie erhalten ein konkretes Angebot, das wir halten.</p>
     <ul class="split-list">
       <li>Konkretes Angebot, schriftlich und verbindlich</li>
       <li>Notarbeauftragung innerhalb einer Woche nach Einigung</li>
@@ -400,7 +536,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
     <h2 class="split-title">Fertige Objekte mit <em>Rendite.</em></h2>
     <p class="split-body">Wir entwickeln Objekte und verkaufen sie selektiv an Kapitalanleger. Vollständig aufbereitet, mit belastbaren Zahlen.</p>
     <ul class="split-list">
-      <li>5,6 % Bruttorendite (aktuelle Objekte Münster)</li>
+      <li>6,0 % Bruttorendite (aktuelles Objekt Münster)</li>
       <li>AfA-Optimierung durch Restnutzungsdauergutachten möglich</li>
       <li>Positiver Cashflow ab Monat 1</li>
       <li>Vollständiges Komplettpaket, kein Aufwand für Sie</li>
@@ -409,33 +545,78 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
   </div>
 </div>
 
-<!-- STATS BAR -->
-<div class="stats-bar">
-  <div class="stat">
-    <div class="stat-val">NRW</div>
-    <div class="stat-lbl">Ankaufsregion</div>
+<!-- MFH HIGHLIGHT STRIP -->
+<div class="mfh-strip-grid" style="background:var(--brown); padding:3rem 5vw; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+  <div>
+    <p style="font-size:0.72rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--sand); opacity:0.7; margin-bottom:0.75rem;">Neu im Ankauf</p>
+    <h3 style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,2.2vw,2.2rem); font-weight:500; color:var(--sand-light); line-height:1.25; margin-bottom:1rem;">Mehrfamilienhäuser<br><em style="font-weight:400;">4 bis 10 Einheiten.</em></h3>
+    <p style="font-size:0.92rem; color:var(--sand); opacity:0.8; font-weight:300; line-height:1.75; max-width:480px;">Wir kaufen Mehrfamilienhäuser in NRW direkt vom Eigentümer oder über Makler. Vollvermietet, teilvermietet oder leerstehend. Mit oder ohne Sanierungsbedarf. Schriftliches Angebot innerhalb von 5 Werktagen.</p>
   </div>
-  <div class="stat">
-    <div class="stat-val">5 Tage</div>
-    <div class="stat-lbl">Bis zum Angebot</div>
-  </div>
-  <div class="stat">
-    <div class="stat-val">5,6 %</div>
-    <div class="stat-lbl">Bruttorendite (Münster)</div>
-  </div>
-  <div class="stat">
-    <div class="stat-val">Top-Lagen</div>
-    <div class="stat-lbl">Geringes Leerstandsrisiko</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+    <div style="padding:1.25rem; border:0.5px solid rgba(200,180,154,0.25);">
+      <p style="font-size:0.7rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--sand); opacity:0.6; margin-bottom:0.4rem;">Einheiten</p>
+      <p style="font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:400; color:var(--sand-light); line-height:1;">4–10</p>
+    </div>
+    <div style="padding:1.25rem; border:0.5px solid rgba(200,180,154,0.25);">
+      <p style="font-size:0.7rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--sand); opacity:0.6; margin-bottom:0.4rem;">Region</p>
+      <p style="font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:400; color:var(--sand-light); line-height:1;">NRW</p>
+    </div>
+    <div style="padding:1.25rem; border:0.5px solid rgba(200,180,154,0.25);">
+      <p style="font-size:0.7rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--sand); opacity:0.6; margin-bottom:0.4rem;">Vermietung</p>
+      <p style="font-family:'Playfair Display',serif; font-size:1rem; font-weight:400; color:var(--sand-light); line-height:1.3;">Voll, teil oder leer</p>
+    </div>
+    <div style="padding:1.25rem; border:0.5px solid rgba(200,180,154,0.25);">
+      <p style="font-size:0.7rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--sand); opacity:0.6; margin-bottom:0.4rem;">Notar</p>
+      <p style="font-family:'Playfair Display',serif; font-size:1rem; font-weight:400; color:var(--sand-light); line-height:1.3;">Sehr kurzfristig</p>
+    </div>
   </div>
 </div>
 
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-val">1 Termin</div>
+    <div class="stat-lbl">Kein Besichtigungstourismus</div>
+  </div>
+  <div class="stat">
+    <div class="stat-val">5 Tage</div>
+    <div class="stat-lbl">Bis zum schriftlichen Angebot</div>
+  </div>
+  <div class="stat">
+    <div class="stat-val">Diskret</div>
+    <div class="stat-lbl">Ohne öffentliche Vermarktung</div>
+  </div>
+  <div class="stat">
+    <div class="stat-val">Direkt</div>
+    <div class="stat-lbl">Kein Makler, kein Fonds</div>
+  </div>
+</div>
 <hr class="rule">
 
+<section style="background: var(--white); padding: 5rem 5vw;">
+  <p class="section-eyebrow">Warum direkt verkaufen</p>
+  <h2 class="section-title">Diskret. Schnell.<br><em>Ohne Umwege.</em></h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:3.5rem;" class="zwei-spalten-grid">
+
+    <div>
+      <p style="font-size:0.72rem; font-weight:500; letter-spacing:0.13em; text-transform:uppercase; color:var(--brown-light); margin-bottom:1rem;">Für Eigentümer</p>
+      <p style="font-size:0.95rem; color:var(--text-muted); font-weight:300; line-height:1.8;">Kein Schild, kein Portal-Inserat, keine Unruhe im Haus. Ihre Mieter erfahren nichts, bis notariell abgeschlossen ist. Und Ihr Objekt hängt nicht neun Monate am Markt. Eine Immobilie, die lange am Markt ist, verliert in der Wahrnehmung von Käufern an Attraktivität und damit real an Verhandlungsstärke.</p>
+    </div>
+
+    <div>
+      <p style="font-size:0.72rem; font-weight:500; letter-spacing:0.13em; text-transform:uppercase; color:var(--brown-light); margin-bottom:1rem;">Für Makler</p>
+      <p style="font-size:0.95rem; color:var(--text-muted); font-weight:300; line-height:1.8;">Ein Termin, ein Käufer, eine Entscheidung. Statt zwanzig Besichtigungen mit Interessenten, deren Finanzierung am Ende nicht steht. Provision käuferseitig, marktüblich. Abwicklung über Ihren oder unseren Notar.</p>
+    </div>
+
+  </div>
+</section>
+
+<hr class="rule">
 <!-- ANKAUFSPROFIL -->
 <section class="ankauf" id="ankauf">
   <p class="section-eyebrow">Ankaufsprofil</p>
   <h2 class="section-title">Was wir <em>suchen.</em></h2>
-  <p class="section-lead">Für eine erste Einschätzung genügen: Objektart, Baujahr, Energieeffizienzklasse, Wohnfläche und Adresse. Wir prüfen zügig und melden uns direkt zurück.</p>
+  <p class="section-lead">Eigentumswohnungen und Mehrfamilienhäuser mit 4 bis 10 Einheiten. Für eine erste Einschätzung genügen: Objektart, Baujahr, Wohnfläche und Adresse. Wir prüfen zügig und melden uns direkt zurück.</p>
 
   <div class="ankauf-grid">
     <div>
@@ -447,52 +628,62 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
       </div>
 
       <div class="ankauf-tabs" role="tablist">
-        <button class="ankauf-tab active" onclick="showTab('t1', this)">Einzelwohnung leerstehend</button>
-        <button class="ankauf-tab" onclick="showTab('t2', this)">Renovierungs- & Sanierungsbedarf</button>
-        <button class="ankauf-tab" onclick="showTab('t3', this)">Entrümpelung nötig</button>
+        <button class="ankauf-tab active" onclick="showTabNew('mfh', this)">Mehrfamilienhaus 4–10 Einheiten</button>
+        <button class="ankauf-tab" onclick="showTabNew('etw', this)">Einzelwohnung</button>
+        <button class="ankauf-tab" onclick="showTabNew('reno', this)">Renovierungs- & Sanierungsbedarf</button>
+        <button class="ankauf-tab" onclick="showTabNew('ent', this)">Entrümpelung nötig</button>
       </div>
-      <div class="ankauf-tab-panels">
-        <div class="ankauf-panel active" id="t1">
-          <p class="panel-title">Leerstehende Einzelwohnungen</p>
-          <p class="panel-lead">Das ist unser Kerngeschäft. Wir kaufen leerstehende Eigentumswohnungen in NRW, unabhängig davon, wie lange die Wohnung bereits leer steht oder warum. Keine langen Erklärungen nötig.</p>
-          <div class="panel-tags">
-            <span class="panel-tag">Alle Baujahre</span>
-            <span class="panel-tag">Alle Größen</span>
-            <span class="panel-tag">EG bis DG</span>
-            <span class="panel-tag">Energieklasse A–D</span>
-            <span class="panel-tag">Keine Erbpacht</span>
-            <span class="panel-tag">NRW ab 50.000 EW</span>
-          </div>
-        </div>
-        <div class="ankauf-panel" id="t2">
-          <p class="panel-title">Renovierungs- & Sanierungsbedürftige Wohnungen</p>
-          <p class="panel-lead">Schimmel, veraltete Elektrik, abgewohnte Böden, Kernsanierung: kein Problem. Wir bewerten den Sanierungs- und Renovierungsbedarf selbst und machen ein Angebot, das den Zustand fair einpreist. Kein Abzug im Nachhinein.</p>
-          <div class="panel-tags">
-            <span class="panel-tag">Feuchtigkeit & Schimmel</span>
-            <span class="panel-tag">Elektrik & Heizung</span>
-            <span class="panel-tag">Sanitär & Bäder</span>
-            <span class="panel-tag">Böden & Oberflächen</span>
-            <span class="panel-tag">Fenster & Türen</span>
-            <span class="panel-tag">Komplettkernsanierung</span>
-          </div>
-        </div>
-        <div class="ankauf-panel" id="t3">
-          <p class="panel-title">Wohnungen mit Entrümpelung</p>
-          <p class="panel-lead">Sie möchten nichts mitnehmen oder haben keine Zeit, die Wohnung zu räumen? Wir übernehmen die Entrümpelung und Räumung, vollständig und koordiniert, ohne zusätzlichen Aufwand für Sie.</p>
-          <div class="panel-tags">
-            <span class="panel-tag">Vollständige Räumung</span>
-            <span class="panel-tag">Nachlasswohnungen</span>
-            <span class="panel-tag">Messie-Wohnungen</span>
-            <span class="panel-tag">Koordination durch uns</span>
-            <span class="panel-tag">Keine Vorleistung nötig</span>
-          </div>
+
+      <div id="panel-mfh" style="background:var(--white); border:0.5px solid var(--rule); border-top:none; padding:2rem;">
+        <p class="panel-title">Mehrfamilienhäuser · 4 bis 10 Einheiten</p>
+        <div class="panel-tags">
+          <span class="panel-tag">Baujahr 1960–1990</span>
+          <span class="panel-tag">2–3 Zimmer je Einheit</span>
+          <span class="panel-tag">Bis 50–75 qm</span>
+          <span class="panel-tag">Vollvermietet & Leerstand</span>
+          <span class="panel-tag">Keine Erbpacht</span>
+          <span class="panel-tag">NRW ab 30.000 EW</span>
         </div>
       </div>
+      <div id="panel-etw" style="display:none; background:var(--white); border:0.5px solid var(--rule); border-top:none; padding:2rem;">
+        <p class="panel-title">Einzelwohnungen</p>
+        <p class="panel-lead">Wir kaufen Eigentumswohnungen in NRW, vermietet oder leerstehend. Keine langen Erklärungen nötig.</p>
+        <div class="panel-tags">
+          <span class="panel-tag">Alle Baujahre</span>
+          <span class="panel-tag">Bis 80 qm</span>
+          <span class="panel-tag">EG bis DG</span>
+          <span class="panel-tag">Energieklasse A–D</span>
+          <span class="panel-tag">Keine Erbpacht</span>
+          <span class="panel-tag">NRW ab 30.000 EW</span>
+        </div>
+      </div>
+      <div id="panel-reno" style="display:none; background:var(--white); border:0.5px solid var(--rule); border-top:none; padding:2rem;">
+        <p class="panel-title">Renovierungs- & Sanierungsbedürftige Wohnungen</p>
+        <p class="panel-lead">Schimmel, veraltete Elektrik, abgewohnte Böden, Kernsanierung: kein Problem. Wir bewerten den Sanierungs- und Renovierungsbedarf selbst und machen ein Angebot, das den Zustand fair einpreist. Kein Abzug im Nachhinein.</p>
+        <div class="panel-tags">
+          <span class="panel-tag">Feuchtigkeit & Schimmel</span>
+          <span class="panel-tag">Elektrik & Heizung</span>
+          <span class="panel-tag">Sanitär & Bäder</span>
+          <span class="panel-tag">Böden & Oberflächen</span>
+          <span class="panel-tag">Fenster & Türen</span>
+          <span class="panel-tag">Komplettkernsanierung</span>
+        </div>
+      </div>
+      <div id="panel-ent" style="display:none; background:var(--white); border:0.5px solid var(--rule); border-top:none; padding:2rem;">
+        <p class="panel-title">Wohnungen mit Entrümpelung</p>
+        <p class="panel-lead">Sie möchten nichts mitnehmen oder haben keine Zeit, die Wohnung zu räumen? Wir übernehmen die Entrümpelung und Räumung, vollständig und koordiniert, ohne zusätzlichen Aufwand für Sie.</p>
+        <div class="panel-tags">
+          <span class="panel-tag">Vollständige Räumung</span>
+          <span class="panel-tag">Nachlasswohnungen</span>
+          <span class="panel-tag">Koordination durch uns</span>
+          <span class="panel-tag">Keine Vorleistung nötig</span>
+        </div>
+    </div>
     </div>
 
     <div class="ankauf-info">
       <div class="info-box">
-        <p class="info-box-title">Ankaufsregion NRW</p>
+        <p class="info-box-title">Ankaufsregion NRW · Einzelwohnungen & MFH</p>
         <div class="region-list">
           <span class="region-pill">Bielefeld</span>
           <span class="region-pill">Münster</span>
@@ -597,7 +788,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
       <p class="objekt-detail-desc">Vollständig möblierte 4-Zimmer-WG in einer der gefragtesten Lagen Münsters. ÖPNV und Einkauf direkt vor der Tür. Sie kaufen, wir kümmern uns um den Rest: Erstvermietung, laufende Verwaltung auf Wunsch, ein Objekt das vom ersten Tag an Ertrag bringt. Cashflow positiv nach Rücklagenbildung und nicht umlegbaren Kosten.</p>
       <div class="objekt-metrics">
         <div class="om">
-          <span class="om-val">5,6 %</span>
+          <span class="om-val">6,0 %</span>
           <span class="om-key">Bruttorendite</span>
         </div>
         <div class="om">
@@ -613,7 +804,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
         <p style="font-size:0.7rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--brown-light); margin-bottom:0.4rem;">Kaufpreis</p>
         <p style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:400; color:var(--brown); line-height:1;">540.000 €</p>
       </div>
-      <a href="https://www.anfrage-termin.de/ackfeld-immobilien-wg-munster/page_ywffpl/" target="_blank" rel="noopener" class="btn-primary">Exposé anfordern</a>
+      
       <p class="objekt-footnote">AfA-Optimierung (3,5–4 %) setzt ein Restnutzungsdauergutachten voraus, das nach Erwerb beauftragt wird. Alle Angaben dienen der Erstorientierung; maßgeblich sind die Unterlagen im Exposé.</p>
     </div>
   </div>
@@ -657,7 +848,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
         <p class="objekt-detail-desc">Vollständig sanierte und möblierte 4-Zimmer-WG in zentraler Lage. Bäcker, Supermarkt, ÖPNV und Gastronomie fußläufig. Sie unterschreiben beim Notar, wir übernehmen alles andere: Erstvermietung, Übergabe, Verwaltung auf Wunsch. Cashflow positiv nach Rücklagenbildung und nicht umlegbaren Kosten. Ein Komplettpaket ohne Aufwand für Sie.</p>
         <div class="objekt-metrics">
           <div class="om">
-            <span class="om-val">6 %</span>
+            <span class="om-val">6,0 %</span>
             <span class="om-key">Bruttorendite</span>
           </div>
           <div class="om">
@@ -673,6 +864,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
         <p style="font-size:0.7rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--brown-light); margin-bottom:0.4rem;">Kaufpreis</p>
         <p style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:400; color:var(--brown); line-height:1;">499.000 €</p>
       </div>
+        
       <p class="objekt-footnote">AfA-Optimierung (bis 3,5 %) setzt ein Restnutzungsdauergutachten voraus, das nach Erwerb beauftragt wird. Alle Angaben dienen der Erstorientierung; maßgeblich sind die Unterlagen im Exposé.</p>
       </div>
     </div>
@@ -713,14 +905,14 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
 <!-- FÜR VERKÄUFER: PROZESS -->
 <section class="verkauf" id="verkauf">
   <p class="section-eyebrow">Für Eigentümer</p>
-  <h2 class="section-title">Einfach. Diskret. <em>Verlässlich.</em></h2>
+  <h2 class="section-title">Einfach. Diskret.<br><em>Verlässlich.</em></h2>
   <p class="section-lead">Kein Bieterverfahren, keine Maklerkonkurrenz, kein monatelanger Prozess. Wir kaufen direkt.</p>
 
   <div class="process-steps">
     <div class="ps">
       <p class="ps-num">01</p>
       <p class="ps-title">Kontakt aufnehmen</p>
-      <p class="ps-body">Schicken Sie uns die Eckdaten Ihres Objekts, formlos per E-Mail oder Telefon. Keine langen Formulare.</p>
+      <p class="ps-body">Schicken Sie uns die Eckdaten Ihrer Wohnung oder Ihres Mehrfamilienhauses, formlos per E-Mail oder Telefon. Keine langen Formulare.</p>
     </div>
     <div class="ps">
       <p class="ps-num">02</p>
@@ -754,7 +946,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
     </div>
     <div class="vorteil">
       <span class="v-dash">–</span>
-      <p class="v-text"><strong>Auch Sanierungsobjekte.</strong> Wir bewerten baulich selbst, was uns Spielraum gibt, den andere nicht haben.</p>
+      <p class="v-text"><strong>Einzelwohnungen & Mehrfamilienhäuser.</strong> Wir kaufen beide Objekttypen direkt an, unabhängig vom Zustand oder Vermietungsstand.</p>
     </div>
     <div class="vorteil">
       <span class="v-dash">–</span>
@@ -762,7 +954,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
     </div>
     <div class="vorteil">
       <span class="v-dash">–</span>
-      <p class="v-text"><strong>Fester Ansprechpartner.</strong> Kurze Wege, klare Zuständigkeiten. Sie werden nicht weitergereicht.</p>
+      <p class="v-text"><strong>Familienunternehmen.</strong> Katharina und Felix Ackfeld stehen persönlich für jeden Abschluss. Sie sprechen direkt mit uns, nicht mit einem wechselnden Team.</p>
     </div>
   </div>
 
@@ -815,7 +1007,7 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
 
   <div class="makler-inner">
     <div class="makler-text">
-      <p class="section-lead">Wir arbeiten mit Maklern und Privatpersonen zusammen, die leerstehende Wohnungen in unserem Ankaufsgebiet vermarkten oder vermitteln. Was wir zusagen, halten wir. Kurze Entscheidungswege und reibungslose Abwicklung sind für uns selbstverständlich.</p>
+      <p class="section-lead">Wir arbeiten mit Maklern und Privatpersonen zusammen, die Einzelwohnungen oder Mehrfamilienhäuser mit 4 bis 10 Einheiten in unserem Ankaufsgebiet vermarkten oder vermitteln. Was wir zusagen, halten wir. Kurze Entscheidungswege und reibungslose Abwicklung sind für uns selbstverständlich.</p>
       <div class="makler-perks">
         <div class="perk">
           <span class="perk-n">1</span>
@@ -865,11 +1057,13 @@ footer { background: var(--brown); padding: 2.75rem 5vw; display: flex; align-it
         </div>
         <div class="channel">
           <span class="ch-lbl">Ankaufsregion</span>
-          <span class="ch-val">Nordrhein-Westfalen ab 50.000 Einwohner</span>
+          <span class="ch-val">Nordrhein-Westfalen ab 30.000 Einwohner</span>
         </div>
         <div class="channel">
           <span class="ch-lbl">Instagram</span>
-          <span class="ch-val"><a href="https://instagram.com/futurefirst.ackfeld" target="_blank" rel="noopener">@futurefirst.ackfeld</a></span>
+          <span class="ch-val"><a href="https://instagram.com/ackfeld.immobilien" target="_blank" rel="noopener">@ackfeld.immobilien</a></span>
+        </div>
+        
         </div>
       </div>
     </div>
@@ -1005,6 +1199,16 @@ document.addEventListener('DOMContentLoaded', function() {
 })();
 
 // ── TABS ──
+function showTabNew(id, btn) {
+  var panels = ['mfh','etw','reno','ent'];
+  panels.forEach(function(p) {
+    document.getElementById('panel-' + p).style.display = 'none';
+  });
+  document.querySelectorAll('.ankauf-tab').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById('panel-' + id).style.display = 'block';
+  btn.classList.add('active');
+}
+
 function showTab(id, btn) {
   document.querySelectorAll('.ankauf-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.ankauf-tab').forEach(b => b.classList.remove('active'));
