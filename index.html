@@ -431,15 +431,15 @@ footer { background: var(--brown-deep); color: var(--sand-light); padding: clamp
   /* Über uns: Porträt neben Name */
   .about-head { max-width: none; }
   .duo { gap: 14px; margin-top: 2.2rem; }
-  .member, .member:hover { grid-row: auto; grid-template-rows: auto auto auto auto; display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 16px; align-items: center; padding: 18px; background: var(--cream); }
-  .member .photo { aspect-ratio: 3 / 4; grid-row: 1 / span 2; width: 120px; }
+  .member, .member:hover { grid-row: auto; display: block; padding: 0; background: var(--cream); }
+  .member .photo { aspect-ratio: 3 / 4; width: 100%; }
   .member .photo .ph { font-size: 0; gap: 0; }
   .member .photo .ph svg { width: 22px; height: 22px; }
-  .m-body { display: contents; }
-  .member .role { grid-column: 2; align-self: end; white-space: normal; font-size: 0.6rem; letter-spacing: 0.14em; line-height: 1.5; }
-  .member h3 { grid-column: 2; align-self: start; font-size: 1.35rem; margin: 0.25rem 0 0; }
-  .member p { grid-column: 1 / -1; margin-top: 1rem; font-size: 0.96rem; line-height: 1.7; min-height: 0; }
-  .member dl { grid-column: 1 / -1; margin-top: 0.9rem; }
+  .m-body { display: block; padding: 22px 20px 8px; }
+  .member .role { display: block; white-space: normal; font-size: 0.62rem; letter-spacing: 0.14em; line-height: 1.5; }
+  .member h3 { font-size: 1.55rem; margin: 0.35rem 0 0; }
+  .member p { margin-top: 0.9rem; font-size: 0.96rem; line-height: 1.7; min-height: 0; }
+  .member dl { margin-top: 1rem; }
   .member dl div { padding: 0.6rem 0; display: grid; grid-template-columns: 7.4rem minmax(0, 1fr); gap: 0.8rem; align-items: baseline; }
   .member dt { font-size: 0.6rem; letter-spacing: 0.14em; }
   .member dd { margin: 0; font-size: 0.92rem; }
@@ -525,8 +525,8 @@ footer { background: var(--brown-deep); color: var(--sand-light); padding: clamp
   .hero-fig .photo { aspect-ratio: 4 / 5; }
   .hero h1 { margin-top: 0; }
   .hb, .hb + .hb, .crit > div, .member dl div { grid-template-columns: 5.6rem minmax(0, 1fr); }
-  .member { grid-template-columns: 100px minmax(0, 1fr); }
-  .member .photo { width: 100px; }
+
+
 }
 
 /* ═══ TABLET (iPad hoch/quer) ═══ */
