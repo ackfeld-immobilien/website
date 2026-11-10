@@ -99,7 +99,7 @@ h2 em { font-style: italic; color: var(--brown-light); }
 .hero-fig { margin: 0 0 0 auto; position: relative; width: 100%; max-width: 400px; isolation: isolate; }
 .hero-fig .photo { position: relative; z-index: 1; aspect-ratio: 3 / 4; background: linear-gradient(155deg, #3B2B1E, #2A1D13); box-shadow: 0 40px 80px -30px rgba(0,0,0,0.6); }
 .hero-fig .ph { color: var(--sand); }
-.hero-fig::after { content: ""; position: absolute; z-index: 2; inset: 16px; border: 1px solid rgba(200,180,154,0.28); pointer-events: none; }
+.hero-fig::after { content: none; }
 .hero-art { position: absolute; z-index: 0; right: -42%; bottom: -5%; height: 136%; width: auto; aspect-ratio: 640 / 720; opacity: 0.6;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 16%), linear-gradient(to top, #000 85%, transparent 100%); -webkit-mask-composite: source-in;
   mask-image: linear-gradient(to right, transparent 0%, #000 16%), linear-gradient(to top, #000 85%, transparent 100%); mask-composite: intersect; }
